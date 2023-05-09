@@ -22,10 +22,10 @@
     <!-- Header section -->
     <header class="class-header">
       <div class="header-container container">
+        <a class="logo link" href="./index.html"
+          >Web<span class="logo-up">Studio</span></a
+        >
         <nav class="navigation">
-          <a class="logo link" href="./index.html"
-            >Web<span class="logo-up">Studio</span></a
-          >
           <ul class="list header-list">
             <li>
               <a href="./index.html" class="site-nav current link">Studio</a>
@@ -39,7 +39,7 @@
           </ul>
         </nav>
         <address class="adress">
-          <ul class="list header-list">
+          <ul class="list header-adress-list">
             <li>
               <a href="mailto:info@devstudio.com" class="auth-nav link"
                 >info@devstudio.com</a
@@ -52,6 +52,25 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="32"
+            height="22"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="/images"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -66,11 +85,11 @@
       </section>
 
       <!-- About us -->
-      <section class="section">
-        <div class="container container-about-us">
+      <section class="about-us-section">
+        <div class="container">
           <h2 class="about-us-header" hidden>Feature</h2>
-          <ul class="list about-us-container">
-            <li class="about-us-list">
+          <ul class="list about-us-list">
+            <li class="about-us-item">
               <div class="socials-item">
                 <svg class="socials-icons" width="64" height="64">
                   <use
@@ -86,7 +105,7 @@
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="about-us-list">
+            <li class="about-us-item">
               <div class="socials-item">
                 <svg class="socials-icons" width="64" height="64">
                   <use
@@ -102,7 +121,7 @@
                 within the shortest possible time.
               </p>
             </li>
-            <li class="about-us-list">
+            <li class="about-us-item">
               <div class="socials-item">
                 <svg class="socials-icons" width="64" height="64">
                   <use
@@ -118,7 +137,7 @@
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="about-us-list">
+            <li class="about-us-item">
               <div class="socials-item">
                 <svg class="socials-icons" width="64" height="64">
                   <use
@@ -176,6 +195,10 @@
           <ul class="list list-container">
             <li class="our-team-list">
               <img
+                srcset="
+                  ./images/ourteam/markguerrero1.jpg    264w,
+                  ./images/ourteam/markguerrero1@2x.jpg 528w
+                "
                 src="./images/ourteam/markguerrero1.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -218,6 +241,10 @@
             </li>
             <li class="our-team-list">
               <img
+                srcset="
+                  ./images/ourteam/tomford2.jpg    1x,
+                  ./images/ourteam/tomford2@2x.jpg 2x
+                "
                 src="./images/ourteam/tomford2.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -260,6 +287,11 @@
             </li>
             <li class="our-team-list">
               <img
+                srcset="
+                  ./images/ourteam/camilagarcia3.jpg    1x,
+                  ./images/ourteam/camilagarcia3@2x.jpg 2x
+                "
+                sizes="264px"
                 src="./images/ourteam/camilagarcia3.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -302,6 +334,10 @@
             </li>
             <li class="our-team-list">
               <img
+                srcset="
+                  ./images/ourteam/danielwilson4@1x.jpg 1x,
+                  ./images/ourteam/danielwilson4@2x.jpg 2x
+                "
                 src="./images/ourteam/danielwilson4.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -537,6 +573,75 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="modal-svg" width="24" height="24">
+          <use href="./images/icons.svg#icon-Vector"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li>
+          <a class="mobile-menu-nav-link link" href="./index.html">Studio</a>
+        </li>
+        <li>
+          <a class="mobile-menu-nav-link link" href="./portfolio.html"
+            >Portfolio</a
+          >
+        </li>
+        <li><a class="mobile-menu-nav-link link" href="">Contacts</a></li>
+      </ul>
+      <ul class="mobile-menu-contacts">
+        <li class="mobile-menu-list list">
+          <a href="tel:+110001111111" class="mobile-menu-tel link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="mobile-menu-list list">
+          <a href="mailto:info@devstudio.com" class="mobile-menu-email link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="list mobile-menu-icons">
+        <li class="our-team-icons-list">
+          <a class="our-team-icons-link" href="">
+            <svg class="our-team-icons-svg" width="16" height="16">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="our-team-icons-list">
+          <a class="our-team-icons-link" href="">
+            <svg class="our-team-icons-svg" width="16" height="16">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="our-team-icons-list">
+          <a class="our-team-icons-link" href="">
+            <svg class="our-team-icons-svg" width="16" height="16">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="our-team-icons-list">
+          <a class="our-team-icons-link" href="">
+            <svg class="our-team-icons-svg" width="16" height="16">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
