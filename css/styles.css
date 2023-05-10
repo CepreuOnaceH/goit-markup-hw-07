@@ -58,6 +58,7 @@ button {
 .header-container {
   display: flex;
   align-items: center;
+  height: 70px;
 }
 @media only screen and (min-width: 1200px) {
   .header-container {
@@ -97,6 +98,11 @@ body {
     align-items: center;
     gap: 40px;
     height: 72px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-mail {
+    margin-bottom: 12px;
   }
 }
 .navigation {
@@ -183,8 +189,6 @@ body {
 .auth-nav {
   text-decoration: none;
   color: var(--secondary-text-color);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -194,7 +198,13 @@ body {
 .auth-nav:hover {
   color: var(--hero-btn-bcg-color);
 }
-
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .auth-nav {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 /* Hero section */
 
 .hero-background {
@@ -384,7 +394,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 392px;
-  min-height: 576px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -584,9 +593,21 @@ body {
 .about-us-item {
   width: 396px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
+  .about-us-item {
+    margin-bottom: 72px;
+  }
+  .about-us-item:last-child {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
   .about-us-item {
     width: 356px;
+    margin-bottom: 48px;
+  }
+  .about-us-item:last-child {
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -649,11 +670,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-@media only screen and (max-width: 1199px) {
-  .aboutus-text {
-    margin-bottom: 72px;
-  }
-}
 @media only screen and (min-width: 1200px) {
   .aboutus-text {
     font-weight: 400;
@@ -692,13 +708,28 @@ body {
     gap: 24px;
   }
 }
-.clients-item {
-  width: 190px;
-  height: 88px;
-}
-@media only screen and (min-width: 768px) {
+
+@media only screen and (max-width: 767px) {
   .clients-item {
-    width: 168px;
+    margin-bottom: 56px;
+    width: calc((100% - 16px) / 2);
+  }
+  .clients-item:nth-child(n + 5) {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients-item {
+    width: calc((100% - 24px * 2) / 3);
+    margin-bottom: 48px;
+  }
+  .clients-item:nth-child(n + 4) {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .clients-item {
+    width: calc((100% - 24px * 5) / 6);
   }
 }
 .our-team-list-container {
@@ -762,6 +793,9 @@ body {
   .list-container {
     margin-bottom: 24px;
   }
+  .list-container:last-child {
+    margin-bottom: 0;
+  }
 }
 @media only screen and (min-width: 768px) {
   .list-container {
@@ -776,14 +810,24 @@ body {
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 72px;
 }
+@media only screen and (max-width: 767px) {
+  .our-team-list:last-child {
+    margin-bottom: 0;
+  }
+}
 @media only screen and (min-width: 768px) {
   .our-team-list {
     width: 264px;
+    margin-bottom: 40px;
+  }
+  .our-team-list:nth-child(n + 3) {
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
   .our-team-list {
     width: calc((100% - 3 * 24px) / 4);
+    margin-bottom: 0;
   }
 }
 .our-team-list-title {
@@ -1007,6 +1051,7 @@ body {
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1019,14 +1064,18 @@ body {
     text-align: center;
   }
 }
-.footer-logo-container {
-  width: 268px;
-  margin-left: auto;
-  margin-right: auto;
+@media only screen and (max-width: 767px) {
+  .footer-logo-container {
+    width: 268px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media only screen and (min-width: 768px) {
   .footer-logo-container {
     width: 264px;
+    margin-right: 24px;
+    margin-bottom: 72px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1039,15 +1088,25 @@ body {
     text-align: center;
   }
 }
-.footer-social-container {
-  margin-left: auto;
-  margin-right: auto;
+@media only screen and (max-width: 767px) {
+  .footer-social-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .footer-subscribe {
-  width: 398px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .footer-subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer-subscribe {
+    margin-left: auto;
+  }
 }
 .footer-subscribe-text {
   font-size: 16px;
@@ -1125,8 +1184,6 @@ body {
   background-color: var(--hero-btn-bcg-color);
 }
 .logo {
-  font-family: "Raleway";
-  font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -1135,23 +1192,21 @@ body {
   color: var(--accent-text-color);
   margin-right: 76px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1199px) {
   .logo {
     margin-right: auto;
   }
 }
+
 .logo-link {
   display: inline-block;
   margin-bottom: 16px;
 }
 .logo-text {
   color: var(--logo-text-color);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
-  max-width: 264px;
+  line-height: 1.5;
 }
 .logo-down {
   color: var(--logo-text-color);
@@ -1163,8 +1218,6 @@ body {
   text-transform: uppercase;
 }
 .footer-text {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -1276,8 +1329,6 @@ body {
 } */
 .mobile-menu-nav-link {
   color: var(--primary-text-color);
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
@@ -1285,8 +1336,11 @@ body {
   text-transform: capitalize;
   margin-bottom: 40px;
 }
-.mobile-menu-nav-link:active,
+/* .mobile-menu-nav-link:active,
 .mobile-menu-nav-link:hover {
+  color: var(--hero-btn-bcg-color);
+} */
+.mobile-menu-nav-link.current {
   color: var(--hero-btn-bcg-color);
 }
 .mobile-menu-list {
@@ -1299,7 +1353,7 @@ body {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #434455;
+  color: var(--accent-text-color);
 }
 .mobile-menu-email {
   font-weight: 500;
