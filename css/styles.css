@@ -582,7 +582,7 @@ body {
   .about-us-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -603,10 +603,10 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .about-us-item {
-    width: 356px;
-    margin-bottom: 48px;
+    width: calc((100% - 24px) / 2);
+    margin-bottom: 72px;
   }
-  .about-us-item:last-child {
+  .about-us-item:nth-child(n + 3) {
     margin-bottom: 0;
   }
 }
@@ -654,6 +654,11 @@ body {
   margin-bottom: 8px;
   text-align: center;
 }
+@media only screen and (min-width: 768px) {
+  .aboutus-title {
+    text-align: left;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .aboutus-title {
     font-weight: 500;
@@ -685,9 +690,12 @@ body {
     padding: 120px 0;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .client-container {
+    width: 584px;
+  }
+}
 .clients-title {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
@@ -697,22 +705,23 @@ body {
   margin-bottom: 72px;
   color: var(--primary-text-color);
 }
-.clients-container {
+.clients-list {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+  column-gap: 16px;
 }
 @media only screen and (min-width: 768px) {
-  .clients-container {
-    gap: 24px;
+  .clients-list {
+    column-gap: 24px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .clients-item {
-    margin-bottom: 56px;
+    margin-bottom: 72px;
     width: calc((100% - 16px) / 2);
+    height: 88px;
   }
   .clients-item:nth-child(n + 5) {
     margin-bottom: 0;
@@ -721,7 +730,8 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .clients-item {
     width: calc((100% - 24px * 2) / 3);
-    margin-bottom: 48px;
+    margin-bottom: 72px;
+    height: 88px;
   }
   .clients-item:nth-child(n + 4) {
     margin-bottom: 0;
@@ -730,6 +740,7 @@ body {
 @media only screen and (min-width: 1200px) {
   .clients-item {
     width: calc((100% - 24px * 5) / 6);
+    height: 88px;
   }
 }
 .our-team-list-container {
@@ -771,7 +782,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .our-team {
-    padding: 120px 0px 48px 0px;
+    padding: 120px 0px 120px 0px;
   }
 }
 .our-team-title {
@@ -799,7 +810,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .list-container {
-    gap: 24px;
+    column-gap: 24px;
   }
 }
 .our-team-list {
@@ -818,7 +829,6 @@ body {
 @media only screen and (min-width: 768px) {
   .our-team-list {
     width: 264px;
-    margin-bottom: 40px;
   }
   .our-team-list:nth-child(n + 3) {
     margin-bottom: 0;
@@ -1052,11 +1062,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0;
+    padding-left: 108px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer-container {
     flex-wrap: nowrap;
+    padding-left: 16px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1081,6 +1093,7 @@ body {
 @media only screen and (min-width: 1200px) {
   .footer-logo-container {
     margin-right: 120px;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1099,8 +1112,12 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .footer-subscribe {
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer-subscribe {
+    text-align: left;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1131,14 +1148,16 @@ body {
 .footer-subscribe-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .footer-subscribe-container {
     flex-direction: row;
+    gap: 24px;
   }
 }
 .footer-subscribe-input {
@@ -1207,6 +1226,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
 }
 .logo-down {
   color: var(--logo-text-color);
@@ -1280,10 +1300,6 @@ body {
   }
 }
 
-/* .menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
 .mobile-menu-icons {
   display: flex;
   justify-items: center;
